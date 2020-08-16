@@ -1,0 +1,20 @@
+DayofMonth:	Day of Month
+DayOfWeek:	Day of Week
+Flight Date:	Flight date
+UniqueCarrier:	Unique Carrier Code
+TailNum:	Unique Tail Number of the Aircraft
+OriginAirportID:	Origin Airport, ID Number to identify a unique airport; assigned by US DOT
+Origin:		Origin Airport
+OriginStateName:	Name of Origin State
+DestAirportID:	Destination Airport, ID Number to identify a unique airport; assigned by US DOT
+Dest:	Destination airport
+DepTime:	Departure Time (local, hhmm)
+DepDelay:	Difference in minutes between scheduled and actual departure time.  Early departures show negative numbers.
+WheelsOff:  	Wheels Off Time (local time: hhmm)
+WheelsOn:		Wheels On Time (local time: hhmm)
+Arrtime:	Arrival Time
+ArrDelay:		Difference in minutes between scheduled and actual arrival time. Early arrivals show negative numbers.
+Cancelled:  Cancelled Flight Indicator (1 = Yes)
+Cancellation Code:  Specifies the reason for cancellation
+AirTime:  Flight Time, in Minutes
+Distance:  Distance between airports (miles)

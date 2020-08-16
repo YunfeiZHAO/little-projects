@@ -1,0 +1,30 @@
+package edu.upenn.cit594.processor​;
+
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.regex.Pattern;
+
+import edu.upenn.cit594.data​.Data;
+import edu.upenn.cit594.data​.Message;
+
+public class Search {
+	boolean String search(Message message, String word) {
+		String text = message.text;
+		text = text.toLowerCase();
+		return Pattern.matches(" flu ", text)
+				|| Pattern.matches("^flu ", text)
+				|| Pattern.matches(" flu$", text)
+				|| Pattern.matches(" #flu ", text)
+				|| Pattern.matches("^#flu ", text)
+				|| Pattern.matches(" #flu$", text)
+				|| Pattern.matches(" flu[^a-z] ", text);
+				|| Pattern.matches("^flu[^a-z] ", text);
+				|| Pattern.matches(" flu[^a-z]$", text);
+		
+	}
+	
+	public String search(Data data, int[] position) {
+		Map<String, Float[]> states = data.states;
+	}
+	
+}

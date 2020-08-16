@@ -1,0 +1,9 @@
+package edu.upenn.cit594.data​;
+
+public class message {
+
+	public message() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

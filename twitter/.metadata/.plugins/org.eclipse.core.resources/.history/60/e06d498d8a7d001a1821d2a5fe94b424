@@ -1,0 +1,46 @@
+package edu.upenn.cit594.data​;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class Data {
+	public ArrayList<Message> data = new ArrayList<Message>();
+	public Map<String, Float[]> states = new HashMap<String, Float[]>(); 
+	
+	public Data(String path) {
+		File f = new File(path);
+		if(f.exists()) {
+			if(f.canRead()) {
+		        try {
+		        	String line;
+		        	BufferedReader br = new BufferedReader(new FileReader(path));
+		            while ((line = br.readLine()) != null) {
+		               String[] elements = line.split(",");
+		               Float[] position = new Float[2];
+		               position[0] = Float.parseFloat(elements[1]);
+		               position[1] = Float.parseFloat(elements[2]);
+		               data.put(elements[0], position);
+		            }       
+		         } catch(Exception e) {
+		        	 e.printStackTrace();
+		         }
+			}
+		}
+	}
+	public void add(JSONObject o) {
+		Message m = new Message(o);
+		data.add(m);
+	}
+	
+	public void add(String[] o) {
+		Message m = new Message(o);
+		data.add(m);
+	}
+}

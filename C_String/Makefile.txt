@@ -1,0 +1,23 @@
+#########################################################
+#  file name   : Makefile                               #
+#  author      : Xiaoyu Gong                            #
+#  description : Makefile to automate compiling         #
+#                and linking                            #
+#########################################################
+
+all: program1 program2
+
+program1: program1.c
+	clang program1.c -o program1
+
+program2: program2.c
+	clang program2.c -o program2
+
+my_string.o: my_string.c
+	clang -c my_string.c
+
+clean:
+	rm -rf *.o
+
+clobber: clean
+	rm -rf program1 program2

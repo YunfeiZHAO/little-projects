@@ -1,0 +1,9 @@
+package edu.upenn.cit594.data​;
+
+public class message {
+	public String[] location = new String[2];
+	public String time;
+	public String text;
+	
+	public message()
+}

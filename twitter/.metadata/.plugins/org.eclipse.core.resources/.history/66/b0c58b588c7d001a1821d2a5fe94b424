@@ -1,0 +1,24 @@
+package edu.upenn.cit594.processor​;
+
+import edu.upenn.cit594.data​.Data;
+import edu.upenn.cit594.data​.States;
+
+public class SearchWord implements Search{
+
+	public SearchWord() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String search(States states, String state) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String search(Data data, String word) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

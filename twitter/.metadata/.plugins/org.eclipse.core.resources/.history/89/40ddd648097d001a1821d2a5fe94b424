@@ -1,0 +1,13 @@
+package edu.upenn.cit594.data​;
+
+import org.json.simple.JSONObject;
+
+public class message {
+	public String[] location = new String[2];
+	public String time;
+	public String text;
+	
+	public message(JSONObject l, String t, String tex) {
+		this.location[0] = 0
+	}
+}

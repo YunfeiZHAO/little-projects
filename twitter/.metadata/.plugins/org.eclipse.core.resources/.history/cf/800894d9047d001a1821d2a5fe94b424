@@ -1,0 +1,16 @@
+package edu.upenn.cit594.processor​;
+
+import edu.upenn.cit594.datamanagement​.Reader;
+import edu.upenn.cit594.data​.Data;
+
+public abstract class Processor {
+	protected Reader reader;
+	public Processor() {
+		reader = createReader();
+	}
+	public void process() {
+		Data data = reader.read();
+	}
+	
+	protected abstract Reader createReader();
+}

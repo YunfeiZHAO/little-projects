@@ -1,0 +1,32 @@
+package edu.upenn.cit594.data​;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.HashMap;
+import java.util.Map;
+
+public class States {
+	public Map<String, String[]> data = new HashMap<String, String[]>(); 
+	public States(String path) {
+		File f = new File(path);
+		if(f.exists()) {
+			if(f.canRead()) {
+		        try {
+		        	String line;
+		        	BufferedReader br = new BufferedReader(new FileReader(path));
+		            while ((line = br.readLine()) != null) {
+		               String[] elements = line.split(",");
+		               String[] position = new String[2];
+		               position[0] = elements[1];
+		               position[1] = elements[2];
+		               data.put(elements[0], position);
+		            }       
+		         } catch(Exception e) {
+		        	 e.printStackTrace();
+		         }
+			}
+		}
+	}
+
+}

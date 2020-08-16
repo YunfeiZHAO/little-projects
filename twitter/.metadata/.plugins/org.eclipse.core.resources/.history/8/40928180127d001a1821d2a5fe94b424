@@ -1,0 +1,15 @@
+package edu.upenn.cit594.data​;
+
+import java.util.ArrayList;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class Data {
+	public ArrayList<Message> data = new ArrayList<Message>();
+	
+	public void add(JSONObject o) {
+		Message m = new Message(o.get("location"), o.get("time"), o.get("text"));
+		data.add(m);
+	}
+}

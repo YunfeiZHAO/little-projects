@@ -1,0 +1,9 @@
+package edu.upenn.cit594.datamanagement​;
+
+public class JsonReader implements Reader {
+
+	public JsonReader() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

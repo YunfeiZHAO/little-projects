@@ -1,0 +1,9 @@
+package edu.upenn.cit594.datamanagement​;
+
+public class TxtReader {
+
+	public TxtReader() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,9 @@
+package edu.upenn.cit594.data​;
+
+public class States {
+
+	public States() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

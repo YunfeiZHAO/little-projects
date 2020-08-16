@@ -1,0 +1,21 @@
+package edu.upenn.cit594.processor​;
+
+import edu.upenn.cit594.datamanagement​.Reader;
+import edu.upenn.cit594.data​.Data;
+import edu.upenn.cit594.data​.States;
+
+public abstract class Processor {
+	protected Reader reader;
+	public Data message;
+	public States states;
+	
+	public Processor() {
+		reader = createReader();
+	}
+	public void process(String path_message, String path_states) {
+		message = reader.read(path_message);
+		states = new States(path_states);
+	}
+	
+	protected abstract Reader createReader();
+}

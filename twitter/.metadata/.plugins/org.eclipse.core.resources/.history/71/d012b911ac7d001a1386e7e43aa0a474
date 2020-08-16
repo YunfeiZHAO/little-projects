@@ -1,0 +1,40 @@
+package edu.upenn.cit594;
+
+import java.util.regex.Pattern;
+
+import edu.upenn.cit594.logging.Logger;
+import edu.upenn.cit594.processor​.JsonProcessor;
+import edu.upenn.cit594.processor​.Processor;
+import edu.upenn.cit594.processor​.Search;
+import edu.upenn.cit594.processor​.TxtProcessor;
+
+public class Main {
+
+	public static void main(String[] args) {
+//		if(args.length != 4) {
+//			System.out.println("Wrong input arguments number");
+//		} else if(!(args[0].toLowerCase().equals("json") || args[0].toLowerCase().equals("text"))) {
+//			System.out.println("Choose a valide input file format: json or text");
+//		} else {
+//			Logger l = Logger.getInstance();
+//			Processor p;
+//			if(args[0].equals("json")) {
+//				p = new JsonProcessor();
+//			} else {
+//				p = new TxtProcessor();
+//			}
+//			p.process(args[1], args[2]);
+//			l.log(p);
+//		}
+//	}
+//		Logger l = Logger.getInstance("log.txt");
+//		Processor p;
+//		p = new JsonProcessor();
+//		p.process("flu_tweets.json", "states.csv");
+//		l.log(p);
+		String text = "How would I know if I have flu the ​flu​?";
+		text = text.toLowerCase();
+		System.out.println(Pattern.matches("flu", text));
+	}
+
+}

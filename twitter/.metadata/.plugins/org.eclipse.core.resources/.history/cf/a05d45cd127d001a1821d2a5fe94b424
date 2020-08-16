@@ -1,0 +1,21 @@
+package edu.upenn.cit594.data​;
+
+import java.util.Iterator;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class Message {
+	public Float[] location = new Float[2];
+	public String time;
+	public String text;
+	
+	public Message(JSONObject o) {
+		
+		int i = 0;
+		for(Iterator iterator = l.keySet().iterator(); iterator.hasNext();) {
+		    String key = (String) iterator.next();
+		    System.out.println(o.get(key));
+		}
+	}
+}

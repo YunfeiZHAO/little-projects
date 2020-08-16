@@ -1,0 +1,39 @@
+package edu.upenn.cit594.datamanagement​;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+
+import org.json.simple.parser.JSONParser;
+import edu.upenn.cit594.data​.Data;
+
+public class TxtReader implements Reader{
+
+	public TxtReader() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Data read(String path) {
+		Data data = new Data();
+		File f = new File(path);
+		if(f.exists()) {
+			if(f.canRead()) {
+		        try {
+		        	String line;
+		        	BufferedReader br = new BufferedReader(new FileReader(path));
+		            while ((line = br.readLine()) != null) {
+		               String[] elements = line.split("\t");
+		               System.out.print(elements[0]);
+		               System.out.print(elements[1]);
+		               
+		            }       
+		         } catch(Exception e) {
+		        	 e.printStackTrace();
+		         }
+			}
+		}
+		return data;
+	}
+
+}

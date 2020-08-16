@@ -1,0 +1,15 @@
+package edu.upenn.cit594;
+
+import edu.upenn.cit594.logging.Logger;
+import edu.upenn.cit594.processor​.JsonProcessor;
+import edu.upenn.cit594.processor​.Processor;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Logger l = Logger.getInstance();
+		
+		Processor p = new JsonProcessor();
+		p.process("flu_tweets.json");
+
+}

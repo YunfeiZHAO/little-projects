@@ -1,0 +1,7 @@
+package edu.upenn.cit594.data​;
+
+public class Data {
+	public static class message {
+
+	}
+}

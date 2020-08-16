@@ -1,0 +1,33 @@
+package edu.upenn.cit594.datamanagement​;
+
+import java.io.File;
+import java.io.FileReader;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.*;
+import edu.upenn.cit594.data​.Data;
+
+
+public class JsonReader implements Reader {
+
+	public JsonReader() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Data read(String path) {
+		Data data = new Data();
+		JSONParser parser = new JSONParser();
+		File f = new File("flu_tweets.json");
+		if(f.exists()) {
+			if(f.canRead()) {
+				JSONArray messages = (JSONArray)parser.parse();
+			} else {
+				System.out.print("Can't read file" + );
+			}
+		} else {
+			System.out.print("File no found");
+		}
+		return data;
+	}
+
+}

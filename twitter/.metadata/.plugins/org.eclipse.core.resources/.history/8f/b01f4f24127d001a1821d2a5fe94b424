@@ -1,0 +1,30 @@
+package edu.upenn.cit594.data​;
+
+import java.util.Iterator;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class Message {
+	public Float[] location = new Float[2];
+	public String time;
+	public String text;
+	
+	public Message(JSONObject l, JSONObject t, JSONObject tex) {
+		int i = 0;
+		Iterator<String> keys = l.keys();
+		while(keys.hasNext()) {
+		    String key = keys.next();
+		    if (jsonObject.get(key) instanceof JSONObject) {
+		          // do something with jsonObject here      
+		    }
+		}
+		while(iter.hasNext()) {
+			Float f = Float.parseFloat(iter.next().toString());
+			location[i] = f;
+			i++;
+		}
+		time = t;
+		text = tex;
+	}
+}

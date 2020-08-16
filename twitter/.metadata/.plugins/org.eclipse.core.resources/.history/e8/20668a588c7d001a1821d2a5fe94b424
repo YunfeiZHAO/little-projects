@@ -1,0 +1,9 @@
+package edu.upenn.cit594.processor​;
+
+public class SearchWord {
+
+	public SearchWord() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
